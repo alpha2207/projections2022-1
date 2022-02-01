@@ -1,0 +1,12 @@
+body {
+  background: url(../imgs/footer.png);
+}
+.main-div {
+    margin-top:7rem;
+    background: rgba($color: #000000, $alpha: 0.25);
+    backdrop-filter: blur(4px);
+  .sc-div {
+    margin: 1rem 0;
+    color: #fff;
+  }
+}

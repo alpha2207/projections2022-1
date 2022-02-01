@@ -6,6 +6,16 @@ let cursor = document.querySelector('.cursor');
 let cursorinner = document.querySelector('.cursor2');
 let a = document.querySelectorAll('a');
 let loadingDiv=document.querySelector(".loading-bar");
+let whatsapp=document.querySelector(".whatsapp");
+
+window.addEventListener('scroll',()=>{
+  if(window.scrollY===0){
+    whatsapp.style.display="none";
+  }
+  else{
+    whatsapp.style.display="flex";
+  }
+})
 
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;

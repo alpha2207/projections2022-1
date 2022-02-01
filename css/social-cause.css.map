@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,uBAAuB;CACpC;;AACD,AAAA,SAAS,CAAC;EACN,UAAU,EAAC,IAAI;EACf,UAAU,EAAe,mBAAO;EAChC,eAAe,EAAE,SAAS;CAK7B;;AARD,AAIE,SAJO,CAIP,OAAO,CAAC;EACN,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "social-cause.scss"
+    ],
+    "names": [],
+    "file": "social-cause.css"
+}

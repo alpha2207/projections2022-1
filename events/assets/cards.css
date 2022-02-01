@@ -162,6 +162,13 @@ section {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   padding: 1rem;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-5px) !important;
+          transform: translateY(-5px) !important;
 }
 
 .btn-register {

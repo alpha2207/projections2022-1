@@ -126,6 +126,18 @@ body .main {
   height: auto;
 }
 
+.whatsapp {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1000;
+}
+
+.whatsapp img {
+  height: 2rem;
+  width: 2rem;
+}
+
 section {
   padding: 6rem 3rem;
 }
@@ -198,7 +210,7 @@ a {
 }
 
 .hero-info .textInfo .explore {
-  margin: .5rem;
+  margin: 0.5rem;
   height: 3.2rem;
   width: 10rem;
   border-radius: 5rem;
@@ -324,7 +336,8 @@ a {
 }
 
 @-webkit-keyframes swing {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -335,7 +348,8 @@ a {
 }
 
 @keyframes swing {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }

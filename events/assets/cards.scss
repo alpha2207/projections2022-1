@@ -155,6 +155,10 @@ section {
     backdrop-filter: blur(5px);
     // color: white;
     padding: 1rem;
+    transition: all 500ms ease-out;
+    &:hover{
+      transform: translateY(-5px) !important;
+    }
   }
 
   .btn-register{
