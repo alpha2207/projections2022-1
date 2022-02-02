@@ -1,80 +1,96 @@
 //Main.js
 
-
 // Js for custom cursor
-let cursor = document.querySelector('.cursor');
-let cursorinner = document.querySelector('.cursor2');
-let a = document.querySelectorAll('a');
-let loadingDiv=document.querySelector(".loading-bar");
-let whatsapp=document.querySelector(".whatsapp");
+let cursor = document.querySelector(".cursor");
+let cursorinner = document.querySelector(".cursor2");
+let a = document.querySelectorAll("a");
+let loadingDiv = document.querySelector(".loading-bar");
+let whatsapp = document.querySelector(".whatsapp");
 
-window.addEventListener('scroll',()=>{
-  if(window.scrollY===0){
-    whatsapp.style.display="none";
+document.onkeydown = function(e) {
+  if(e.keyCode == 123) {
+     return false;
   }
-  else{
-    whatsapp.style.display="flex";
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
   }
-})
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
 
-document.addEventListener('mousemove', function(e){
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY === 0) {
+    whatsapp.style.display = "none";
+  } else {
+    whatsapp.style.display = "flex";
+  }
+});
+
+document.addEventListener("mousemove", function (e) {
   var x = e.clientX;
   var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
 });
 
-document.addEventListener('mousemove', function(e){
+document.addEventListener("mousemove", function (e) {
   var x = e.clientX;
   var y = e.clientY;
-  cursorinner.style.left = x + 'px';
-  cursorinner.style.top = y + 'px';
+  cursorinner.style.left = x + "px";
+  cursorinner.style.top = y + "px";
 });
 
-document.addEventListener('mousedown', function(){
-  cursor.classList.add('click');
-  cursorinner.classList.add('cursorinnerhover')
+document.addEventListener("mousedown", function () {
+  cursor.classList.add("click");
+  cursorinner.classList.add("cursorinnerhover");
 });
 
-document.addEventListener('mouseup', function(){
-  cursor.classList.remove('click')
-  cursorinner.classList.remove('cursorinnerhover')
+document.addEventListener("mouseup", function () {
+  cursor.classList.remove("click");
+  cursorinner.classList.remove("cursorinnerhover");
 });
 
-a.forEach(item => {
-  item.addEventListener('mouseover', () => {
-    cursor.classList.add('hover');
+a.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hover");
   });
-  item.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hover');
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
   });
-})
+});
 
 // Js for loading bar
 function getScrollPercent() {
-  var h = document.documentElement, 
-      b = document.body,
-      st = 'scrollTop',
-      sh = 'scrollHeight';
-  return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+  var h = document.documentElement,
+    b = document.body,
+    st = "scrollTop",
+    sh = "scrollHeight";
+  return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
 }
-window.addEventListener('scroll',()=>{
-  let a=getScrollPercent();
-  loadingDiv.style.width=`${a}%`;
-})
+window.addEventListener("scroll", () => {
+  let a = getScrollPercent();
+  loadingDiv.style.width = `${a}%`;
+});
 
-let whatsapp = document.getElementById("whatsapp")
+let whatsapp = document.getElementById("whatsapp");
 
-window.addEventListener('scroll',()=>{
-  if(window.scrollY===0){
-    whatsapp.style.display="none";
+window.addEventListener("scroll", () => {
+  if (window.scrollY === 0) {
+    whatsapp.style.display = "none";
+  } else {
+    whatsapp.style.display = "flex";
   }
-  else{
-    whatsapp.style.display="flex";
-  }
-})
+});
 
-let totop = document.getElementsByClassName("totop")[0]
+let totop = document.getElementsByClassName("totop")[0];
 
-totop.addEventListener('click',()=>{
+totop.addEventListener("click", () => {
   window.scrollTo(0, 0);
-})
+});
